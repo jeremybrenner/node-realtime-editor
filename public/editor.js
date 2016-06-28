@@ -20,10 +20,13 @@ window.onload = function() {
 
 	editor.addEventListener('input', convertText);
 
-	sharejs.open('home', 'text', function(err,doc){
-		doc.attach_textarea(editor);
-		convertText();
-	});
+	if(document.location.pathname.length > 1){
+		var documentName = document.location.pathname.substring(1);
+		sharejs.open(documentName, 'text', function(err,doc){
+			doc.attach_textarea(editor);
+			convertText();
+		});
+	}
 
 	setInterval(function() {
 		watchMarkdown();

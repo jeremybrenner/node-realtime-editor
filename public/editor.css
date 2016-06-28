@@ -5,7 +5,12 @@
 #page-header {
 	text-align: left;
 	font-size: 30px;
-	margin: 5px 0px 30px 1px;
+	margin: 5px 0px 50px 1px;
+	list-style-type: none;
+}
+
+#page-header li {
+	font-size: 15px;
 }
 
 #editor {
