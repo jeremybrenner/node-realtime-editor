@@ -5,12 +5,15 @@ window.onload = function() {
 
 	var convertText = function(){
 		var rawMarkdown = editor.value;
-		
+
 		parsedMarkdown = converter.makeHtml(rawMarkdown);
 		markdownArea.innerHTML = parsedMarkdown;
 	};
 
 	editor.addEventListener('input', convertText);
 
-	convertText();
+	sharejs.open('home', 'text', function(err,doc){
+		doc.attach_textarea(editor);
+		convertText();
+	});
 };
