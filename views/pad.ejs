@@ -2,15 +2,18 @@
 	<head>
 		<title>Realtime Markdown with Node!</title>
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="stylesheet" type="text/css" href="editor.css">
+		<script src="https://cdn.rawgit.com/showdownjs/showdown/1.4.2/dist/showdown.min.js" type="text/javascript" charset="utf-8" async defer></script>
 		<script src="editor.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
 	<body class="container-fluid">
-
+		<div id="page-header" class="row">
+			<span>.:: node markdown editor ::.</span>
+		</div>
 		<div class ="row">
-			<textarea id="pad" class="col-md-6 full-height">Get going!</textarea>
-			<div class="col-md-6 full-height"></div>
+			<textarea id="editor" class="col-md-6 full-height" placeholder="Enter markdown here..."></textarea>
+			<div id="markdown" class="col-md-6 full-height"></div>
 		</div>
 
 	</body>

@@ -1,8 +1,14 @@
-html, body, div, .full-height {
+.full-height {
 	height: 100%;
 }
 
-#pad {
+#page-header {
+	text-align: left;
+	font-size: 30px;
+	margin: 5px 0px 10px 1px;
+}
+
+#editor {
 	border: none;
 	overflow: auto;
 	outline: none;
