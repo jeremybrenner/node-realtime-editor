@@ -5,6 +5,7 @@ window.onload = function() {
 
 	var convertText = function(){
 		var rawMarkdown = editor.value;
+		
 		parsedMarkdown = converter.makeHtml(rawMarkdown);
 		markdownArea.innerHTML = parsedMarkdown;
 	};
